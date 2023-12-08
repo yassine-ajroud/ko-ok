@@ -15,11 +15,11 @@ late MyTheme theme ;
     final String action = prefs.getString('THEME')??'sif';
 
     switch (action) {
-      case "sif": theme = MyTheme(Button: "",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
-      case "5rif": theme = MyTheme(Button: "",appBarImage: "5rif.png",backgroundImage: "BG5rif.png");break;
-      case "chte": theme = MyTheme(Button: "",appBarImage: "chte.png",backgroundImage: "BGchte.png");break;
-      case "rbi3": theme = MyTheme(Button: "",appBarImage: "chte.png",backgroundImage: "BGchte.png");break;
-      default: theme = MyTheme(Button: "",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
+      case "sif": theme = MyTheme(Button: "soleil.png",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
+      case "5rif": theme = MyTheme(Button: "sans-heuilles.png",appBarImage: "5rif.png",backgroundImage: "BG5rif.png");break;
+      case "chte": theme = MyTheme(Button: "flocon-de-neige.png",appBarImage: "chte.png",backgroundImage: "BGchte.png");break;
+      case "rbi3": theme = MyTheme(Button: "tulipe.png",appBarImage: "rbi3.png",backgroundImage: "BGspring.png");break;
+      default: theme = MyTheme(Button: "soleil.png",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
     }
 
 
@@ -27,11 +27,11 @@ late MyTheme theme ;
  
  void setTheme(String newTheme){
    switch (newTheme) {
-   case "sif": theme = MyTheme(Button: "",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
-      case "5rif": theme = MyTheme(Button: "",appBarImage: "5rif.png",backgroundImage: "BG5rif.png");break;
-      case "chte": theme = MyTheme(Button: "",appBarImage: "chte.png",backgroundImage: "BGchte.png");break;
-      case "rbi3": theme = MyTheme(Button: "",appBarImage: "chte.png",backgroundImage: "BGchte.png");break;
-      default: theme = MyTheme(Button: "",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
+    case "sif": theme = MyTheme(Button: "soleil.png",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
+      case "5rif": theme = MyTheme(Button: "sans-heuilles.png",appBarImage: "5rif.png",backgroundImage: "BG5rif.png");break;
+      case "chte": theme = MyTheme(Button: "flocon-de-neige.png",appBarImage: "chte.png",backgroundImage: "BGchte.png");break;
+      case "rbi3": theme = MyTheme(Button: "tulipe.png",appBarImage: "rbi3.png",backgroundImage: "BGspring.png");break;
+      default: theme = MyTheme(Button: "soleil.png",appBarImage: "sif.png",backgroundImage: "BGSIF.png");break;
     }
     notifyListeners();
  }

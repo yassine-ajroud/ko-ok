@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ko_ok/controllers/authentication_controller.dart';
+import 'package:ko_ok/controllers/challenge_controller.dart';
 import 'package:ko_ok/controllers/signcontroller.dart';
 import 'package:ko_ok/controllers/theme_controller.dart';
 import 'package:ko_ok/views/screens/login_screen.dart';
@@ -17,6 +18,7 @@ void main() async{
   runApp(MultiProvider(providers: [
       ChangeNotifierProvider(create: (context) => SigninController()),
       ChangeNotifierProvider(create: (context) => ThemeController()),
+       ChangeNotifierProvider(create: (context) => ChallengeController()),
       ChangeNotifierProvider(create: (context) => AuthController()),
 
 

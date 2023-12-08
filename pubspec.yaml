@@ -77,6 +77,11 @@ flutter:
     - assets/BG5rif.png
     - assets/BGchte.png
     - assets/BGauth.png
+    - assets/BGspring.png
+    - assets/flocon-de-neige.png
+    - assets/sans-feuilles.png
+    - assets/soleil.png
+    - assets/tulipe.png
 
 
   #   - images/a_dot_ham.jpeg

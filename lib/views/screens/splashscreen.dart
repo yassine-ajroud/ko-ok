@@ -4,8 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ko_ok/controllers/authentication_controller.dart';
+import 'package:ko_ok/controllers/challenge_controller.dart';
 import 'package:ko_ok/controllers/theme_controller.dart';
-import 'package:ko_ok/views/screens/add_challege_sceen.dart';
 import 'package:ko_ok/views/screens/home_screen.dart';
 import 'package:ko_ok/views/screens/login_screen.dart';
 import 'package:provider/provider.dart';
@@ -29,11 +29,13 @@ FirebaseAuth.instance
   .userChanges()
   .listen((User? user) async{
     if (user == null) {
-    await  Provider.of<AuthController>(context,listen: false).getCurrentUser();
-       Provider.of<AuthController>(context).userId = user!.uid;
+   
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(_) =>  LoginScreen()));
     } else {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(_) =>  AddChallengeScreen()));
+       await  Provider.of<AuthController>(context,listen: false).getCurrentUser( user.uid);
+             Provider.of<AuthController>(context,listen:false).userId =user.uid;
+      await Provider.of<ChallengeController>(context,listen: false).getAllChanllenges(context);
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(_) =>  HomeScreen()));
     }
   });
 

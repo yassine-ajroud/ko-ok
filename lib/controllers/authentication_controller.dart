@@ -155,9 +155,9 @@ Future<void> getAllUsers()async {
     print(allusers);
 }
 
-Future<void> getCurrentUser()async {
+Future<void> getCurrentUser(String userID)async {
   await getAllUsers();
-  currentUser = allusers.firstWhere((element) => element.id==userId);
+  currentUser = allusers.firstWhere((element) => element.id==userID);
 }
 
 
